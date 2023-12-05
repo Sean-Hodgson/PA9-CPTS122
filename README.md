@@ -2,8 +2,8 @@
 
 
 ### Group Members
-Sean Hodgson
-Vincent Parry
-Lyndell Martin
-Thomas Y
+- Sean Hodgson
+- Vincent Parry
+- Lyndell Martin
+- Thomas Y
 
