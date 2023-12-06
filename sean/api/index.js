@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var fs = require("fs");
 
-var count = 1;
+var count = 0;
 
 app.get('/nPlayer', function (req, res) {
     // First read existing users.
@@ -10,9 +10,20 @@ app.get('/nPlayer', function (req, res) {
    res.status(201).send({playerCount: count});
  })
 
+ app.get('/Players', function (req, res) {
+    // First read existing users.
+   res.status(201).send({playerCount: count});
+ })
+
  app.get('/dPlayer', function (req, res) {
     // First read existing users.
    count -= 1; 
+
+   if (count == -1)
+   {
+      count = 0;
+   }
+
    res.status(201).send({playerCount: count});
  })
 
