@@ -140,8 +140,10 @@
     <Image Include="..\..\..\..\..\Downloads\3 Dude_Monster\Dude_Monster_Idle_4.png" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Menu.hpp" />
+    <ClInclude Include="playerCount.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
