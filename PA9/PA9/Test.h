@@ -16,6 +16,9 @@ public:
 	void testInsertAtFront();
 	void testCopyList();
 	void testPrintLog();
+	void testDeleteAtFront();
+
+	void testIsEmpty();
 
 private:
 	HisData testHistory;

@@ -138,6 +138,7 @@
     <ClCompile Include="HisData.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Ship.cpp" />
+    <ClCompile Include="Test.cpp" />
     <ClCompile Include="Textbox.h" />
   </ItemGroup>
   <ItemGroup>
@@ -151,9 +152,11 @@
     <ClInclude Include="Node.h" />
     <ClInclude Include="playerCount.h" />
     <ClInclude Include="Ship.h" />
+    <ClInclude Include="Test.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="gamelog.txt" />
+    <Text Include="readme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

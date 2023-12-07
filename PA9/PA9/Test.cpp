@@ -1,4 +1,5 @@
 #include "Test.h"
+#include <cassert>
 
 Test::Test()
 {
@@ -42,4 +43,32 @@ void Test::testInsertAtFront()
 	{
 		cout << "Insert at Front Failure" << endl;
 	}
+}
+
+void Test::testDeleteAtFront()
+{
+	List<int> myList;
+
+	myList.insertAtFront(3);
+	myList.insertAtFront(2);
+	myList.insertAtFront(1);
+
+	try {
+		int deletedData = myList.deleteAtFront();
+		std::cout << "Deleted data: " << deletedData << std::endl;
+	}
+	catch (const std::exception& e) {
+		std::cerr << "Error: " << e.what() << std::endl;
+	}
+
+}
+
+void Test::testIsEmpty()
+{
+	List<int> emptyList;
+
+	bool isEmptyResult = emptyList.isEmpty();
+
+	assert(isEmptyResult == true);
+
 }

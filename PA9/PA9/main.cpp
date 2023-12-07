@@ -107,6 +107,7 @@ int main() {
 	playerCountText.setCharacterSize(20);
 	playerCountText.setFillColor(sf::Color::White);
 	playerCountText.setPosition({ 550, 850 });
+	playerCountText.setString(pC.getPlayers());
 
 	if (connType == 's' ||  connType == 'c'){socket.setBlocking(false);} // If client or server set blocking to false.
 
@@ -191,7 +192,7 @@ int main() {
 
 			}
 		}
-		playerCountText.setString(pC.getPlayers());
+	
 
 
 		time(&end);
