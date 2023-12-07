@@ -5,5 +5,5 @@
 - Sean Hodgson
 - Vincent Parry
 - Lyndell Martin
-- Thomas Y
+- Thomas Gebrewold
 
