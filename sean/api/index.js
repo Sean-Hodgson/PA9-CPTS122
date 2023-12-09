@@ -27,9 +27,7 @@ app.get('/nPlayer', function (req, res) {
    res.status(201).send({playerCount: count});
  })
 
- 
-
-var server = app.listen(8081, function () {
+var server = app.listen(process.env.PORT, function () {
    var host = server.address().address
    var port = server.address().port
    console.log("Example app listening at http://%s:%s", host, port)
