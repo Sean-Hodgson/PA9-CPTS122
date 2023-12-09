@@ -39,12 +39,15 @@ void BattleshipGame::runApp()
 			main_option = 3;
 		}
 		else if (main_option == 2) {
-			sf::RenderWindow window(sf::VideoMode(2020, 1080), "SFML", sf::Style::Close | sf::Style::Titlebar);
+			sf::RenderWindow window(sf::VideoMode(2020, 1080), "Battleship", sf::Style::Close | sf::Style::Titlebar);
 			sf::Texture waterTex, shipTex, hitTex, missTex;
 			waterTex.loadFromFile("water.png");
 			shipTex.loadFromFile("ship.png");
 			hitTex.loadFromFile("hitmarker.png");
-		
+
+			sf::Image icon;
+			icon.loadFromFile("icon.png");
+			window.setIcon(200, 200, icon.getPixelsPtr());
 			missTex.loadFromFile("miss.png");
 
 			sf::Font font;

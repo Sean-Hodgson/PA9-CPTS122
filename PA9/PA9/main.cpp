@@ -1,10 +1,10 @@
-
+// Main.cpp
+// Sean, Martin, Tomas, Vincent
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <SFML/Network.hpp>
 #include <time.h>
 #include <string.h>
-#include "Textbox.h"
 #include "Button.h"
 #include "Background.h"
 #include "playerCount.h"
@@ -13,9 +13,11 @@
 
 int main() {
 	srand((unsigned int)time(NULL));
-	time_t start, end, end2;
-	time(&start);
-	sf::IpAddress ip = sf::IpAddress::getLocalAddress();
+
+
+	time_t start, end, end2; 
+	time(&start);// start timer for playerCount
+	sf::IpAddress ip = sf::IpAddress::getLocalAddress(); 
 	sf::TcpSocket socket;
 	playerCount pC;
 
@@ -24,22 +26,22 @@ int main() {
 	char connType;
 
 	std::cin >> connType;
-	if (connType == 's')
+	if (connType == 's') // init server
 	{
 		sf::TcpListener listener;
 		listener.listen(2000);
 		listener.accept(socket);
 	}
-	else if (connType == 'c') 
+	else if (connType == 'c') // init client
 	{ 
 		socket.connect(ip, 2000);
 	}
-	else if (connType == 'n') 
+	else if (connType == 'n') //disable networking
 	{
 		std::cout << "Networking disabled" << std::endl;
 	}
 
-	pC.addPlayer();
+	pC.addPlayer(); // update playerCount
 	sf::Vector2f prevPov, p2Position;
 
 
@@ -49,7 +51,7 @@ int main() {
 	window.create(sf::VideoMode(900, 900), "Battleship", sf::Style::Titlebar | sf::Style::Close);
 	window.setPosition(centerWindow);
 
-
+	// texture loading
 	 sf::Texture t;
 	t.loadFromFile("background.jpg");
 	sf::Sprite s(t);
@@ -90,7 +92,7 @@ int main() {
 	btn2.setFont(font);
 	btn2.setPosition({ 150, 300 });
 
-
+	// Battleship Text
 	sf::Text TitleText;
 	TitleText.setCharacterSize(48);
 	TitleText.setFillColor(sf::Color::White);

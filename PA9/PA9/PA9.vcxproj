@@ -139,7 +139,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Ship.cpp" />
     <ClCompile Include="Test.cpp" />
-    <ClCompile Include="Textbox.h" />
+    <ClCompile Include="Textbox2.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Background.h" />
